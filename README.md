@@ -15,6 +15,13 @@ hellohellohello.
 
 ## задание 2 - c#
 
+### Код
+
+Перед запуском приложения или тестов из корня репозитория выполните:
+Windows: docker-compose --file .\task2\Service\docker-compose.yml up
+Linux: docker compose -f ./task2/Service/docker-compose.yml up
+
+
 ### Вводные данные
 
 Допустим, что Вы разрабатываете *сервис учёта для банка*. Есть две готовые сущности *Transaction* и *Account*. Есть база данных и две таблицы: *Accounts* и *Transactions* с какими-то первоначальными данными.
