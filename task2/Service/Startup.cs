@@ -31,6 +31,7 @@ namespace Service
             services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new OpenApiInfo {Title = "Service", Version = "v1"}); });
             services.AddDbContext<BankingContext>(builder =>
                 builder.UseNpgsql(Configuration.GetConnectionString("Connection")));
+            services.AddScoped<AccountingService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

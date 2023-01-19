@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Service
 {
@@ -12,6 +13,7 @@ namespace Service
         public string Name { get; set; }
     
         [Column("balance")]
+        [ConcurrencyCheck]
         public decimal Balance { get; set; }
     
         [Column("currency")]
