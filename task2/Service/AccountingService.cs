@@ -218,7 +218,9 @@ namespace Service
                 var newBalance = state switch
                 {
                     (TransactionStatus.Declined, TransactionStatus.Completed) => currentBalance + amount,
+                    (TransactionStatus.Pending, TransactionStatus.Completed) => currentBalance + amount,
                     (TransactionStatus.Completed, TransactionStatus.Declined) => currentBalance - amount,
+                    (TransactionStatus.Completed, TransactionStatus.Pending) => currentBalance - amount,
                     _ => currentBalance
                 };
 
